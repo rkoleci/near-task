@@ -1,11 +1,14 @@
 import React from 'react'
+import Wrapper from 'components/Wrapper'
 import { useLoginQuery } from 'api/user'
 
 const Login = () => {
     const { data, error, isLoading } = useLoginQuery('login')
     
     return (
-        <h3>Logn</h3>
+        <Wrapper title="HomePage">
+            Login Page
+        </Wrapper>
     )
 }
 
