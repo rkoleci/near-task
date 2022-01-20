@@ -12,7 +12,7 @@ import Login from 'containers/Login';
 import Verification from 'containers/Login/Verification';
 import Password from 'containers/Password'
 import reportWebVitals from './reportWebVitals';
-import store from 'store'
+import {store} from 'store'
 
 ReactDOM.render(
   <React.StrictMode>
