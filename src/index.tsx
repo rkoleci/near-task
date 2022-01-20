@@ -5,24 +5,27 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import { Provider } from 'react-redux'
 import './index.css';
 import App from './App';
 import Login from './containers/Login';
 import Verification from './containers/Login/Verification';
 import Password from './containers/Password'
 import reportWebVitals from './reportWebVitals';
+import store from './store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/login/verification" element={<Verification />} />
-        <Route path="/login/password" element={<Password />} />
-      </Routes>
-
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/login/verification" element={<Verification />} />
+          <Route path="/login/password" element={<Password />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
