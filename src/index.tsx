@@ -7,12 +7,12 @@ import {
 } from "react-router-dom";
 import { Provider } from 'react-redux'
 import './index.css';
-import App from './App';
-import Login from './containers/Login';
-import Verification from './containers/Login/Verification';
-import Password from './containers/Password'
+import App from 'App';
+import Login from 'containers/Login';
+import Verification from 'containers/Login/Verification';
+import Password from 'containers/Password'
 import reportWebVitals from './reportWebVitals';
-import store from './store'
+import store from 'store'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-import { baseUrl } from '../../addresses'
-import types from '../../types'
+import { baseUrl } from 'addresses'
+import types from 'types'
 
 export const fetchUserProfile = (params) => {
   return (dispatch) => {
