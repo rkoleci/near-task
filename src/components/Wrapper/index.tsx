@@ -1,20 +1,20 @@
 import React, { FC } from 'react'
-import { Container, Header, Title, CloseIcon } from './styles'
+import { MainContainer, Container, Header, Title, TitleBlue, } from './styles'
 
 interface IProps {
     title: string,
+    titleBlue: string,
     children: React.ReactNode,
 }
 
-const Wrapper: FC<IProps> = ({ children, title }) => {
-    return (
+const Wrapper: FC<IProps> = ({ children, title, titleBlue }) => {
+    return ( 
         <Container>
             <Header>
-                <Title>{title}</Title>
-                <CloseIcon />
+                <Title><TitleBlue>{titleBlue}</TitleBlue>{title.replaceAll(titleBlue, '')}</Title> 
             </Header>
             {children}
-        </Container>
+        </Container> 
     )
 }
 
